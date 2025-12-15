@@ -30,3 +30,6 @@ Gem::Specification.new do |spec|
   # Production Dependencies (สำคัญ: เพิ่ม Gem ที่คุณใช้ที่นี่)
   # spec.add_dependency "another_gem", "~> 1.0"
 end
+
+
+
