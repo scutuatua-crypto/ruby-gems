@@ -1,0 +1,32 @@
+name: Release Gem to RubyGems
+
+on:
+  push:
+    branches:
+      - main  # จะรันเมื่อมีการ push โค้ดไปยัง branch 'main' เท่านั้น
+
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby Environment
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1' # ใช้ Ruby เวอร์ชัน 3.1
+          bundler-cache: true
+
+      - name: Build Gem Package (.gem)
+        run: gem build ruby-gems.gemspec
+
+      - name: Publish Gem to RubyGems.org
+        run: gem push *.gem
+        env:
+          # Secret Key ที่เราต้องตั้งค่าใน Settings
+          RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
+
