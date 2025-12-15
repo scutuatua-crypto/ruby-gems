@@ -48,4 +48,3 @@ This repo follows the reef archive structure:
 ## 📝 splash.log
 
 See [splash.log gist](https://gist.github.com/scutuatua-crypto) for full badge timeline and webhook ritual confirmation.
-
