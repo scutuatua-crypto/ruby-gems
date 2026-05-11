@@ -25,7 +25,7 @@ jobs:
         run: gem build ruby-gems.gemspec
 
       - name: Publish Gem to RubyGems.org
-        run: gem push ruby-gems-*.gem
+        run: gem push scutua-ruby-gems-*.gem
         env:
           # Secret Key ที่เราต้องตั้งค่าใน Settings
           RUBYGEMS_API_KEY: ${{ secrets.RUBY_GEMS_API_KEY }}
