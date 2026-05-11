@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "lib/ruby-gems/version"
+require_relative "lib/ruby-gems/version.rb"
 
 Gem::Specification.new do |spec|
   spec.name          = "scutua-ruby-gems"
