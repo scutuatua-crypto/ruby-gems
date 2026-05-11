@@ -28,5 +28,5 @@ jobs:
         run: gem push *.gem
         env:
           # Secret Key ที่เราต้องตั้งค่าใน Settings
-          RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
+          RUBYGEMS_API_KEY: ${{ secrets.RUBY_GEMS_API_KEY }}
 
