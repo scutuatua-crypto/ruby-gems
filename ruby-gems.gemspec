@@ -3,17 +3,20 @@
 require_relative "lib/ruby/gems/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "ruby-gems"
+  # Using a unique name to avoid naming conflicts on RubyGems.org
+  spec.name          = "scutua-ruby-gems"
   spec.version       = RubyGems::VERSION
   spec.authors       = ["scutuatua-crypto"]
-  spec.email         = ["scutua.tua@icloud.com"]
+  
+  # Updated to your primary verified email
+  spec.email         = ["scutua@gmail.com"]
 
   spec.summary       = "A collection of rituals and tools for reef archiving and badge management."
-  spec.description   = spec.summary
+  spec.description   = "Standardized development tools and asset management for the WhaleTrucker ecosystem."
   spec.homepage      = "https://github.com/scutuatua-crypto/ruby-gems"
   spec.license       = "MIT"
 
-  # ไฟล์ที่รวมอยู่ใน Gem
+  # Manifest
   spec.files         = Dir["lib/**/*", "LICENSE.txt", "README.md"]
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
@@ -21,7 +24,7 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = ">= 3.0.0"
 
-  # Dependencies
+  # Development Dependencies
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 13.0"
   spec.add_development_dependency "rspec", "~> 3.0"
