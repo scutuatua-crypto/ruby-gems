@@ -1,23 +1,23 @@
 # frozen_string_literal: true
 
-# This is the main entry point for your Gem.
+# ดึงค่า VERSION มาจากไฟล์ที่บอสเพิ่งแก้
 require_relative "lib/ruby/gems/version"
 
 module RubyGems
-  # Class that handles the core functionality (like Badge Management)
+  # Class สำหรับจัดการฟังก์ชันหลัก (เช่น Badge Management)
   class Archiver
     def initialize(repo_name)
       @repo_name = repo_name
     end
 
     def check_status
-      # This is where your actual logic for checking 'Ritual Chain' status goes.
-      # For now, it returns a simple confirmation.
+      # ส่วนนี้คือ Logic สำหรับเช็ค 'Ritual Chain'
+      # ตอนนี้คืนค่าเป็นข้อความยืนยันไปก่อน
       "RubyGems Archiver initialized for #{@repo_name}. Ready to check rituals!"
     end
   end
 
-  # Shortcut method for easier use
+  # Shortcut method สำหรับเรียกใช้งานได้ง่ายขึ้น
   def self.init_archiver(repo_name)
     Archiver.new(repo_name)
   end
