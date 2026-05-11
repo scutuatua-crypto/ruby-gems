@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This is the main entry point for your Gem.
-require_relative "ruby/gems/version"
+require_relative "lib/ruby/gems/version"
 
 module RubyGems
   # Class that handles the core functionality (like Badge Management)
