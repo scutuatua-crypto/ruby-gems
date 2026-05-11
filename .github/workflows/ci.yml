@@ -14,8 +14,9 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
-      - run: gem install simplecov
-      - run: ruby test/test_ruby_gems.rb
+          bundler-cache: true
+      - run: gem install minitest
+      - run: ruby -Ilib:test test/test_ruby_gems.rb
       - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
