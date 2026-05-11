@@ -4,7 +4,7 @@ require_relative "lib/ruby-gems/version.rb"
 
 Gem::Specification.new do |spec|
   spec.name          = "scutua-ruby-gems"
-  spec.version       = ScutuaRubyGems::VERSION
+  spec.version       = ScutuaScutuaRubyGems::VERSION
   spec.authors       = ["scutuatua-crypto"]
   spec.email         = ["scutua@gmail.com"] # Matches your RubyGems.org account
 
